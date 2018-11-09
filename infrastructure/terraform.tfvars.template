@@ -1,0 +1,4 @@
+INSTANCE="you"
+ENVIRONMENT="dev"
+REGION="westeurope"
+AKS_SSH_ADMIN_KEY="ssh-rsa AA...mEKw== your@key"

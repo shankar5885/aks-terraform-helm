@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: example
+  labels:
+    app: example
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: example
+    spec:
+      containers:
+      - name: example
+        image: "{{ .Values.Registry.Endpoint }}/example:{{ .Values.ImageLabel }}"
+        imagePullPolicy: Always
+      imagePullSecrets:
+      - name: container-registry

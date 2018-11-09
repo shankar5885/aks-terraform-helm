@@ -1,0 +1,11 @@
+# Docker Registry Credentials
+Registry:
+  Endpoint: invalid
+  Username: invalid
+  Password: invalid
+
+# Image Label
+ImageLabel: latest
+
+# FQDN
+Fqdn: invalid

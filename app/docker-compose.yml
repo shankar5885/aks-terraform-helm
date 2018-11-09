@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  example:
+    image: ${IMAGE_REGISTRY-local}/example:${IMAGE_LABEL-dev}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - target: 8888
+        published: 8888

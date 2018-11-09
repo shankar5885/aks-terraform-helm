@@ -1,0 +1,11 @@
+/.kube
+/.helm
+/app/build
+/app/node_modules
+/infrastructure/.terraform
+/infrastructure/*.lock.info
+/infrastructure/terraform.tfstate*
+/infrastructure/terraform.tfvars
+/app.values.yaml
+
+.DS_Store

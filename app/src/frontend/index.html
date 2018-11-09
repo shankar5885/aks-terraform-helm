@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Individually, we are one drop. Together, we are an ocean.</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+        }
+        video {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted playsinline></video>
+    <script>
+        var vres = '426x240';
+        if(screen.width > 240 || screen.height > 240) {
+            vres = '852x480';
+        }
+        if(screen.width > 480 || screen.height > 480) {
+            vres = '1920x1080';
+        }
+        if(screen.width > 1080 || screen.height > 1080) {
+            vres = '3840x2160';
+        }
+        var vsrc = document.createElement('source');
+        vsrc.setAttribute('type', 'video/mp4');
+        vsrc.setAttribute('src', 'https://s3.eu-central-1.amazonaws.com/website-placeholder-assets/videos/waves_' + vres + '.mp4');
+        document.querySelector('video').appendChild(vsrc);
+    </script>
+</body>
+</html>
