@@ -36,7 +36,7 @@ resource "azurerm_kubernetes_cluster" "main" {
   ]
 
   dns_prefix         = "example${var.INSTANCE}${var.ENVIRONMENT}"
-  kubernetes_version = "1.11.3"
+  kubernetes_version = "1.11.5"
 
   linux_profile {
     admin_username = "kadm"
